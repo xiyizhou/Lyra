@@ -132,12 +132,19 @@ into the {body} of the default.hbs template --}}
                 </section>
 
             {{/if}}
-
-            {{!--
-            <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
-            </section>
-            --}}
+            <script src="{{asset "js/jquery.min.js"}}"></script>
+			<script src="{{asset "js/av-min.js"}}"></script>
+            <script src="{{asset "js/Valine.min.js"}}"></script>
+			<div class="comment"></div>
+            <script>
+             new Valine({
+                av: AV,
+                el: '.comment',
+                app_id: 'a1avdg2moWVzKKfrgeIIQp0e-MdYXbMMI',
+                app_key: 'SmWgN3JJ0guh9cBrfiiYp6hJ',
+                placeholder: '留下评论~~'
+            });
+            </script> 
 
         </article>
 
